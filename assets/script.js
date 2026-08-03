@@ -24,6 +24,10 @@ fetch("assets/salahData.json")
   .then((data) => {
     const monthData = data[currentMonth];
 
+    console.log(currentDate);
+    
+    alert(currentDate)
+
 const todayData = monthData
   ? Number(currentDate) === 1
     ? monthData[currentDate]
