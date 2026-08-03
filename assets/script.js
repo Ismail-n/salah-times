@@ -31,8 +31,10 @@ fetch("assets/salahData.json")
 const todayData = monthData
   ? Number(currentDate) === 1
     ? monthData[currentDate]
-    : monthData[Number(currentDate) - 1]
-  : null;    console.log("currentDate", currentDate);
+    : currentDate %2 === 0 ? monthData[Number(currentDate) - 1] : monthData[currentDate]
+  : null;   
+  
+  console.log("currentDate", currentDate);
     const ul = document.createElement("ul");
     ul.classList.add("salahtime-warpper-ul");
 
