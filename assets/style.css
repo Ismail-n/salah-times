@@ -1,24 +1,55 @@
-#salah_times_wrapper{
+#salah_times_wrapper {
     margin: auto;
+    max-width: 400px;
 }
-.salahtime-warpper-ul{
+
+.salahtime-warpper-ul {
     margin: auto;
     list-style: none;
     padding: 0;
-    justify-items: center;
-    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
-.salahtime-warpper-ul li{
 
-    padding: 10px;
-    height: 10px;
-    border-radius: 10px;
-    width: 100%;
-    vertical-align: middle;
-    align-content: center;
-    text-align: center;
-    background:linear-gradient(90deg ,#cbea89, #e0efa5);
-    margin-bottom: 20px;
-    margin-bottom: 10px;
-    font-size: 20px;
+.salahtime-warpper-ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 20px;
+    border-radius: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #2f3b1c;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.salahtime-warpper-ul li:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual gradients, one per prayer/li — cycles every 5 */
+.salahtime-warpper-ul li:nth-child(5n+1) {
+    background: linear-gradient(90deg, #cbea89, #e0efa5); /* fresh green */
+}
+.salahtime-warpper-ul li:nth-child(5n+2) {
+    background: linear-gradient(90deg, #a8e6cf, #dcedc1); /* mint */
+}
+.salahtime-warpper-ul li:nth-child(5n+3) {
+    background: linear-gradient(90deg, #ffd3a5, #fd9853); /* warm sunset */
+}
+.salahtime-warpper-ul li:nth-child(5n+4) {
+    background: linear-gradient(90deg, #a1c4fd, #c2e9fb); /* soft sky blue */
+}
+.salahtime-warpper-ul li:nth-child(5n+5) {
+    background: linear-gradient(90deg, #d4a5ff, #e8c5ff); /* dusk purple */
+}
+
+/* Restrict this styling to mobile only */
+@media (min-width: 601px) {
+    #salah_times_wrapper {
+        display: none;
+    }
 }
