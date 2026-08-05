@@ -29,7 +29,6 @@ fetch("assets/salahData.json")
     ul.classList.add("salahtime-warpper-ul");
 
     for (const [prayer, time] of Object.entries(todayData)) {
-      console.log(prayer ,time)
       const li = document.createElement("li");
       li.textContent = `${prayer} : ${time}`;
       ul.appendChild(li);
