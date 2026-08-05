@@ -15,10 +15,10 @@
 .salahtime-warpper-ul li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 16px 20px;
+    justify-content: center;
+    padding: 30px 20px;
     border-radius: 16px;
-    font-size: 18px;
+    font-size: 30px;
     font-weight: 600;
     color: #2f3b1c;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
