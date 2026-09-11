@@ -1,17 +1,17 @@
 const date = new Date();
 const monthNames = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december",
 ];
 
 const currentMonth = monthNames[date.getMonth()];
@@ -28,10 +28,17 @@ fetch("assets/salahData.json")
     const ul = document.createElement("ul");
     ul.classList.add("salahtime-warpper-ul");
 
-    for (const [prayer, time] of Object.entries(todayData)) {
+    if (todayData) {
+      for (const [prayer, time] of Object.entries(todayData)) {
+        const li = document.createElement("li");
+        li.textContent = `${prayer} : ${time}`;
+        ul.appendChild(li);
+      }
+    } else {
       const li = document.createElement("li");
-      li.textContent = `${prayer} : ${time}`;
+      li.textContent = "No prayer times available";
       ul.appendChild(li);
     }
+    
     salah_times_wrapper.appendChild(ul);
   });
